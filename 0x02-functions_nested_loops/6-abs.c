@@ -1,8 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * int _abs - write the absolute value of an integer.
+ * int _abs - computes the absolute value of an integer.
+ * @a: the int to check
  *
+ * Return: the absolute value of int
  */
 int _abs(int a)
 {
