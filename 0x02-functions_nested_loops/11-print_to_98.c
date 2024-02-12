@@ -32,7 +32,7 @@ void print_to_98(int n)
 		{
 		printf("%d, ", e);
 		}
-		if (e ==98)
+		if (e == 98)
 		{
 			printf("%d", e);
 		}
