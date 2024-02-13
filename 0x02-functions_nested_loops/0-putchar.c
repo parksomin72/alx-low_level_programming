@@ -1,21 +1,19 @@
-#include <stdio.h>
 #include "main.h"
 /**
- * main - Etry point
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-
-int main(void)
+int main()
 {
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	printf("\n");
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
