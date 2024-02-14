@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower - function that checks for lowercase or uppercase character.
+ * _isalpha - function that checks for lowercase or uppercase character.
  * @c: the character that checks.
  * Return: 1 if character is lowercase or uppercase, 0 otherwise.
  */
