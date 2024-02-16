@@ -7,23 +7,21 @@
 int print_last_digit(int n)
 {
 	int j;
+	j = n % 10;
 
-	if (n == 0)
+	if (j == 0)
 	{
-		j = n / 10;
 		_putchar(j + '0');
 	}
-	else if (n != 0)
+	else if (j != 0)
 	{
-		if (n > 0)
+		if (j > 0)
 		{
-			j = n % 10;
 			_putchar(j + '0');
 		}
-		else if (n < 0)
+		else if (j < 0)
 		{
-			n = -n;
-			j = n % 10;
+			j = -j;
 			_putchar(j + '0');
 		}
 	}
