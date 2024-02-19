@@ -25,7 +25,7 @@ int sumMultiplesOf3Or5(int n)
  *
  * Return: Always 0.
  */
-int main(voi)
+int main(void)
 {
 	int n = 1024;
 	int result = sumMultiplesOf3Or5(n);
