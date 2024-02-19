@@ -16,9 +16,9 @@ void print_times_table(int n)
 		{
 			m = i * j;
 
-			if (n == 0)
+			if (j == 0)
 				printf("%d", m);
-			if (m < 10 && n != 0)
+			if (m < 10 && j != 0)
 				printf(",   %d", m);
 			if (m >= 10 && m < 100)
 				printf(",  %d", m);
