@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_times_table - prints the n times table, starting with 0.
- * @n:
+ * @n: number of the times table.
  */
 void print_times_table(int n)
 {
@@ -19,11 +19,23 @@ void print_times_table(int n)
 			if (j == 0)
 				_putchar(m + '0');
 			if (m < 10 && j != 0)
-				printf(",   %d", m);
+				_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(' ');
+			_putchar(m + '0');
 			if (m >= 10 && m < 100)
-				printf(",  %d", m);
+				_putchar(',');
+			_putchar(' ');
+			_putchar(' ');
+				_putchar((m / 10) + '0');
+				_putchar((m % 10) + '0');
 			if (m >= 100)
-				printf(", %d", m);
+				_putchar(',');
+			_putchar(' ');
+				_putchar((m / 10) + '0');
+				_putchar((m / 10) + '0');
+				_putchar((m % 10) + '0');
 		}
 		_putchar('\n');
 	}
