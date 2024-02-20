@@ -27,7 +27,7 @@ int largest_number(int a, int b, int c)
 			largest = c;
 		}
 	}
-	else if (a < 0 && b >= 0 && c >= 0)
+	if (a < 0 && b >= 0 && c >= 0)
 	{
 		if (b > c)
 		{
@@ -38,7 +38,7 @@ int largest_number(int a, int b, int c)
 			largest = c;
 		}
 	}
-	else if (b < 0 && a >= 0 && c >= 0)
+	if (b < 0 && a >= 0 && c >= 0)
 	{
 		if (a > c)
 		{
@@ -49,7 +49,7 @@ int largest_number(int a, int b, int c)
 			largest = c;
 		}
 	}
-	else if (c < 0 && a >= 0 && b >= 0)
+	if (c < 0 && a >= 0 && b >= 0)
 	{
 		if (a > b)
 		{
@@ -60,7 +60,7 @@ int largest_number(int a, int b, int c)
 			largest = b;
 		}
 	}
-	else if (a < 0 && b < 0 && c > 0)
+	if (a < 0 && b < 0 && c > 0)
 	{
 		largest = c;
 	}
@@ -68,7 +68,7 @@ int largest_number(int a, int b, int c)
 	{
 		largest = b;
 	}
-	else if (c < 0 && b < 0 && a > 0)
+	if (c < 0 && b < 0 && a > 0)
 	{
 		largest = a;
 	}
