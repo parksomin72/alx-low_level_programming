@@ -1,7 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _puts - function that prints a string.
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length
  */
 void _puts(char *str)
 {
