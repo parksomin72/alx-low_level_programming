@@ -1,6 +1,13 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+/* Define EXIT_SUCCESS if not already defined */
+#ifndef EXIT_SUCCESS
+#define EXIT_SUCCESS 0
+#endif
+
+/* Include necessary headers */
+#include <unistd.h>
 /* Function prototypes */
 int _putchar(char c);
 int _islower(int c);
