@@ -1,21 +1,16 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * putchar - prints the alphabet in lowercase.
- *
- * Return: Always Success 0
+ * Return: always 0 (Seccuss)
  */
 int main(void)
 {
 	char letters = 'a';
 
-	while (letters <= 'z')
+	for (letters = 'a'; letters <= 'z', letters++)
 	{
 		if (letters != 'e' && letters != 'q')
-		{
 			putchar(letters);
-		}
-		letters++;
 	}
 	putchar('\n');
 	return (0);
