@@ -3,11 +3,11 @@
  * main - Entry point.
  * Return: always 0 (Seccuss)
  */
-int main()
+int main(void)
 {
 	char letters = 'a';
 
-	for(letters = 'a'; letters <= 'z'; letters++)
+	for (letters = 'a'; letters <= 'z'; letters++)
 	{
 		putchar(letters);
 	}
