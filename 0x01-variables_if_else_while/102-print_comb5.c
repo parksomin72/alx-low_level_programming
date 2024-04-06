@@ -21,7 +21,7 @@ int main(void)
 		x = i / 10;
 		y = i % 10;
 
-		if (y > k)
+		if (i > j)
 		{
 		putchar(z + '0');
 		putchar(k + '0');
@@ -29,7 +29,7 @@ int main(void)
 		putchar(x + '0');
 		putchar(y + '0');
 		
-		if (j != 99 && i != 99)
+		if (j != 98 || i != 99)
 		{
 			putchar(',');
 			putchar(' ');
