@@ -9,9 +9,10 @@ int main(void)
 {
 	int i, x, y, z;
 
-	for(z = 0; z < 10; z++)
+	for (z = 0; z < 10; z++)
 	{
 		int j;
+
 		j = z % 10;
 
 		for (i = 0; i < 100; i++)
