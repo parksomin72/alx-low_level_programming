@@ -16,7 +16,7 @@ int main(void)
 		z = j / 10;
 		k = j % 10;
 
-	for (i = 0; i < 100; i++)
+	for (i = 1; i < 100; i++)
 	{
 		x = i / 10;
 		y = i % 10;
