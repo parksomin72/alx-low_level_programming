@@ -21,13 +21,13 @@ int main(void)
 		x = i / 10;
 		y = i % 10;
 
-		putchar(x + '0');
-		putchar(y + '0');
-		putchar(' ');
 		putchar(z + '0');
 		putchar(k + '0');
+		putchar(' ');
+		putchar(x + '0');
+		putchar(y + '0');
 		
-		if (j != 99)
+		if (j != 99 )
 		{
 			putchar(',');
 			putchar(' ');
