@@ -4,7 +4,14 @@
  * Return: Always 0 (Success).
  */
 int main(void)
-{       
+{
+	char alpha;
 
-        return (0);
-}    
+	for (alpha = 'a'; alpha <= 'z'; alpha++)
+	{
+		putchar(alpha);
+	}
+	putchar('\n');
+
+	return (0);
+}
