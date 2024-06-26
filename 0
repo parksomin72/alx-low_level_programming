@@ -1,0 +1,2 @@
+python3 -m c_formatter_42 ex*/*
+python3 -m pip install c-formatter-42
