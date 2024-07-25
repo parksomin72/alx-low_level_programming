@@ -5,9 +5,11 @@
  */
 int main(void)
 {
-	char alpha = 'A';
+	char alpha = 'A', alph = 'a';
 
-	for(; alpha <= 'Z'; alpha++)
+	for (; alph <= 'z'; alph++)
+		putchar(alph);
+	for (; alpha <= 'Z'; alpha++)
 		putchar(alpha);
 	putchar('\n');
 	return (0);
