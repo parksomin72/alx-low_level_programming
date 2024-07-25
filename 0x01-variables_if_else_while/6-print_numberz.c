@@ -5,10 +5,13 @@
  */
 int main(void)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i < 10; i++)
-		printf("%d", i);
-	printf("\n");
+	while (i < 10)
+	{
+		putchar(i + 48);
+		i++;
+	}
+	putchar('\n');
 	return (0);
 }
