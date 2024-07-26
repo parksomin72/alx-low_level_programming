@@ -12,6 +12,7 @@ int main(void)
 		for (; a <= 9; a++)
 		{
 			int j = 1;
+
 			for (; j <= 9; j++)
 			{
 				if (j > a)
