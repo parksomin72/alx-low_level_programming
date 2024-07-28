@@ -6,6 +6,11 @@
  */
 int print_last_digit(int n)
 {
+	if (n == -2147483648)
+	{
+		n = 147483648;
+		_putchar(n % 10);
+	}
 	if (n < 0)
 	{
 		n = -n % 10;
