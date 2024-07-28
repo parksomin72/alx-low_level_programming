@@ -9,7 +9,7 @@ int print_last_digit(int n)
 	if (n == -2147483648)
 	{
 		n = 147483648;
-		_putchar(n % 10);
+		_putchar(n % 10 + 48);
 	}
 	if (n < 0)
 	{
