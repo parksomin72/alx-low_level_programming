@@ -4,24 +4,16 @@
  * @n: the integer
  * Return:  the value of the last digit.
  */
-int print_last_digit(int n)
+int print_last_digit(int nb)
 {
-	if (n == -2147483648)
-	{
-		n = 147483648 % 10;
-		_putchar(n + 48);
-	}
-	if (n < 0 && n != -2147483648)
-	{
-		n = -n % 10;
-		_putchar(n + 48);
-	}
-	else if (n > 0)
-	{
-		n = n % 10;
-		_putchar(n + 48);
-	}
-	else
-		_putchar(n + 48);
-	return (n);
+	int a;
+
+	if (nb < 0)
+		nb = -nb;
+	a = nb % 10;
+
+	if (a < 0)
+		a = -a;
+	_putchar(a + 48);
+	return (a);
 }
