@@ -7,7 +7,7 @@ int main(void)
 {
 	int b = 0;
 
-	for(; b < 100; b++)
+	for (; b < 100; b++)
 	{
 		int a = 0;
 
