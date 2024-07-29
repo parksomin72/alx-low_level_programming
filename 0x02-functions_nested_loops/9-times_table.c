@@ -14,14 +14,14 @@ void times_table(void)
 		{
 			int res = a * b;
 
-			printf("%d", res);
-			if (b != 9)
+			if (b == 0)
 			{
-				if (res >= 10)
-					printf(", ");
-				else if (res < 10)
-					printf(",  ");
+				printf("%d", res);
 			}
+			if (res < 10 && b != 0)
+				printf(",  %d", res);
+			else if (res >= 10)
+				printf(", %d", res);
 			b++;
 		}
 		printf("\n");
