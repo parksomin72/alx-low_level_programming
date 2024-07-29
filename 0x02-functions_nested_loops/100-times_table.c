@@ -18,14 +18,12 @@ void print_times_table(int n)
 
 				if (b == 0)
 					printf("%d", res);
-				if (b != 9)
-					printf(", ");
 				if (res < 10 && b != 0)
-					printf("  %d", res);
+					printf(",   %d", res);
 				else if (res >= 10 && res < 100)
-					printf(" %d", res);
-				else
-					printf("%d", res);
+					printf(",  %d", res);
+				else if (res >= 100)
+					printf(", %d", res);
 				b++;
 			}
 			printf("\n");
