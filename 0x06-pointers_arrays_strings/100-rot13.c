@@ -2,9 +2,9 @@
 #include <stdio.h>
 /**
  * rot13 - encoder rot13
- * @s: pointer to string params
+ * @str: pointer to string params
  *
- * Return: *s
+ * Return: *str
  */
 char *rot13(char *str)
 {
@@ -14,7 +14,7 @@ char *rot13(char *str)
 
 	while (str[i])
 	{
-		j= 0;
+		j = 0;
 
 		while (j < 52)
 		{
