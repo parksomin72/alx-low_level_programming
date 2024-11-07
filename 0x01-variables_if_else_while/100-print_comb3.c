@@ -1,33 +1,32 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int b = 0, a = 0;
+	int num, num1;
 
-	for (; b <= 9; b++)
+	num = 0;
+
+	while (num <= 8)
 	{
-		for (; a <= 9; a++)
+		num1 = num + 1;
+		while (num1 <= 9)
 		{
-			int j = 1;
-
-			for (; j <= 9; j++)
+			putchar(num + 48);
+			putchar(num1 + 48);
+			if (num != 8 || num1 != 9)
 			{
-				if (j > a)
-				{
-					putchar(a + 48);
-					putchar(j + 48);
-					if (j != 9 || a != 8)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				putchar(',');
+				putchar(' ');
 			}
+			num1++;
 		}
+		num++;
 	}
 	putchar('\n');
-	return (0);
+
+	return 0;
 }
