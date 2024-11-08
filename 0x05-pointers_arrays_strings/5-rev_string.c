@@ -23,7 +23,7 @@ void rev_string(char *s)
 {
 	int len, i;
 
-	len = _strlen(s) - 1;
+	len = _strlen(s);
 	i = 0;
 
 	while (i < len / 2)
@@ -31,8 +31,8 @@ void rev_string(char *s)
 		int temp;
 
 		temp = s[i];
-		s[i] = s[len - i];
-		s[len - i] = temp;
+		s[i] = s[len- 1 - i];
+		s[len - 1 - i] = temp;
 		i++;
 	}
 }
