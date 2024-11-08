@@ -6,12 +6,11 @@
  */
 int _strlen(char *s)
 {
-	int i = 0;
+	int i;
 
+	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
 	return (i);
 }
 
@@ -22,17 +21,18 @@ int _strlen(char *s)
  */
 void rev_string(char *s)
 {
-	int i = 0;
-	int len = _strlen(s);
-	char tmp;
+	int len, i;
 
+	len = _strlen(s) - 1;
+	i = 0;
 
 	while (i < len / 2)
 	{
-		tmp = s[i];
-		s[i] = s[len - 1 - i];
-		s[len - 1 - i] = tmp;
+		int temp;
+
+		temp = s[i];
+		s[i] = s[len - i];
+		s[len - i] = temp;
 		i++;
 	}
-
 }
