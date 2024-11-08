@@ -19,4 +19,5 @@ void puts_half(char *str)
 		n++;
 	}
 	_putchar('\n');
+	printf("%d\n", len);
 }
