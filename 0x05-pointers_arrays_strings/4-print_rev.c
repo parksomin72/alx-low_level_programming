@@ -6,13 +6,12 @@
  */
 int _strlen(char *s)
 {
-	int i = 0;
+	int start;
 
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
+	start = 0;
+	while (s[start])
+		start++;
+	return (start);
 }
 
 /**
@@ -22,14 +21,13 @@ int _strlen(char *s)
  */
 void print_rev(char *s)
 {
-	int i, size = _strlen(s);
+	int len;
 
-	i = size - 1;
-
-	while (i >= 0)
+	len = _strlen(s) - 1;
+	while (len >= 0)
 	{
-		_putchar(s[i]);
-		i--;
+		_putchar(s[len]);
+		len--;
 	}
 	_putchar('\n');
 }
