@@ -2,7 +2,7 @@
 
 /**
  * print_number - Helper function that print integer
- * @n: The integer to print.
+ * @nb: The integer to print.
  */
 void print_number(int nb)
 {
@@ -34,11 +34,11 @@ void print_to_98(int n)
 {
 	while (n != 98)
 	{
+		print_number(n);
 		if (n > 98)
 			n--;
 		else
 			n++;
-		print_number(n);
 		_putchar(',');
 		_putchar(' ');
 	}
