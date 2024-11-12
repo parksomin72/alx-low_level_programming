@@ -1,24 +1,33 @@
 #include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
-void print_number(int *a)
+void print_number(int *a, int n)
 {
-	/*int len, arr[10];
+	int j, arr[10];
 
-	len = 0;*/
 
-	if (*a >= 10 && *a < 100)
+	if (a[n] < 0)
+		a[n] = -a[n];
+	if (a[n] >= 0 && a[n] <= 9)
 	{
-		putchar((*a / 10) + 48);
-		putchar((*a % 10) + 48);
+		write(1, &a[n], 1);
 	}
-	
-
-	/*while (len > 0)
+	else
 	{
-		putchar(arr[len] + 48);
-		len--;
-	}*/
+		j = 0;
+		while (a[n] > 0)
+		{
+			arr[j] = a[n] % 10;
+			a[n] = a[n] / 10;
+			j++;
+		}
+	}
+
+	while (j > 0)
+	{
+		_putchar(arr[j - 1] + 48);
+		j--;
+	}
 }
 /**
  * print_array - a function that prints n elements of an array
@@ -33,13 +42,15 @@ void print_array(int *a, int n)
 	i = 0;
 	while (i < n)
 	{
-		print_number(&a[i]);
+		if (a[i] < 0)
+			_putchar('-');
+		print_number(a, i);
 		if (i != n - 1)
 		{
-			putchar(',');
-			putchar(' ');
+			_putchar(',');
+			_putchar(' ');
 		}
 		i++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
