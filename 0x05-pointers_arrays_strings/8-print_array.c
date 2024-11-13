@@ -2,7 +2,8 @@
 #include <unistd.h>
 
 /**
- * print_number - a function that prints the value of a specified element in an array
+ * print_number - function that prints the value
+ * of a specified element in an array
  * @a: array containing the numbers
  * @n: index of the element to print
  */
