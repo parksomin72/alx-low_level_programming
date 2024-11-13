@@ -16,9 +16,6 @@ int _atoi(char *s)
 
 	while (*s)
 	{
-		/*while (*s == ' ' || *s == '\t' || *s == '\v' || *s == '\f'
-			|| *s == '\r' || *s == '\n')
-			s++;*/
 		if (*s == '+' || *s == '-')
 		{
 			if (*s == '-')
@@ -40,6 +37,12 @@ int _atoi(char *s)
 			result = result * 10 + (*s - 48);
 			s++;
 		}
+	}
+	if (result == -2147483648)
+	{
+		putchar('-');
+		putchar('2');
+		result = 147483648;
 	}
 
 	return (sign * result);
