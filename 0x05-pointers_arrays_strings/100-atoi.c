@@ -42,7 +42,7 @@ int _atoi(char *s)
 	{
 		putchar('-');
 		putchar('2');
-		result = 147483648;
+		result = -147483648;
 	}
 
 	return (sign * result);
