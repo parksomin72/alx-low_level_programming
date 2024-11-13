@@ -38,12 +38,6 @@ int _atoi(char *s)
 			s++;
 		}
 	}
-	if (result == -2147483648)
-	{
-		putchar('-');
-		putchar('2');
-		result = -147483648;
-	}
 
 	return (sign * result);
 }
