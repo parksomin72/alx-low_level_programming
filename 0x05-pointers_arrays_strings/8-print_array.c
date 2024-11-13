@@ -9,21 +9,24 @@
 void print_number(int *a, int n)
 {
 	int j, arr[10];
-
+	int num = a[n];
 
 	if (a[n] < 0)
-		a[n] = -a[n];
+	{
+		_putchar('-');
+		num = -num;
+	}
 	if (a[n] >= 0 && a[n] <= 9)
 	{
-		write(1, &a[n], 1);
+		_putchar(num + 48);
 	}
 	else
 	{
 		j = 0;
-		while (a[n] > 0)
+		while (num > 0)
 		{
-			arr[j] = a[n] % 10;
-			a[n] = a[n] / 10;
+			arr[j] = num % 10;
+			num = num / 10;
 			j++;
 		}
 	}
@@ -47,8 +50,6 @@ void print_array(int *a, int n)
 	i = 0;
 	while (i < n)
 	{
-		if (a[i] < 0)
-			_putchar('-');
 		print_number(a, i);
 		if (i != n - 1)
 		{
