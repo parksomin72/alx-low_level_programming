@@ -7,13 +7,14 @@
  */
 char *string_toupper(char *n)
 {
-	int i = 0;
+	char *start;
 
-	while (n[i])
+	start = n;
+	while (*n)
 	{
-		if (n[i] >= 'a' && n[i] <= 'z')
-			n[i] -= 32;
-		i++;
+		if (*n >= 'a' && *n <= 'z')
+			*n -= 32;
+		n++;
 	}
-	return (n);
+	return (start);
 }
