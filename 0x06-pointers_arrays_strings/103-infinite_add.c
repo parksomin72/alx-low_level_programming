@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * len - Computes the length of a string.
  * @str: The string whose length is to be computed.
@@ -7,11 +8,12 @@
  */
 int len(char *str)
 {
-	int len, i;
+	int i;
 
-	for (i = 0, len = 0; str[i]; i++)
-		len++;
-	return (len);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
 /**
@@ -21,41 +23,19 @@ int len(char *str)
  *
  * Return: The length of the longer string between `n1` and `n2`.
  */
-int size(char *n1, char *n2)
+int max_size(char *s1, char *s2)
 {
-	int len_n1, len_n2;
+	int len1, len2;
 
-	len_n1 = len(n1);
-	len_n2 = len(n2);
-	if (len_n1 > len_n2)
-		return (len_n1);
+	len1 = len(s1);
+	len2 = len(s2);
+
+	if (len1 > len2)
+		return (len1);
 	else
-		return (len_n2);
+		return (len2);
 }
 
-/**
- * rev_string - reverse array
- * @str: integer params
- * Return: 0
- */
-char *rev_string(char *str, int size)
-{
-	int i, n;
-	char temp;
-
-	if (size % 2)
-		n = size + 1;
-	else
-		n = size;
-
-	for (i = 0; i < n / 2; i++)
-	{
-		temp = str[i];
-		str[i] = str[size - 1 - i];
-		str[size - 1 - i] = temp;
-	}
-	return str;
-}
 /**
  * infinite_add - add 2 numbers together
  * @n1: text representation of 1st number to add
@@ -66,38 +46,31 @@ char *rev_string(char *str, int size)
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int max_size, carry, sum, i, j;
+	int i, j, k, sum, carry;
 
-	max_size = size(n1, n2);
+	k = max_size(n1, n2);
 
-	if (size_r <= max_size + 1)
+	if (size_r <= k + 1)
 		return (0);
 
 	i = len(n1) - 1;
 	j = len(n2) - 1;
 	carry = 0;
-	r[max_size + 1] = '\0';
+	r[k + 1] = '\0';
 
 	while (i >= 0 || j >= 0 || carry > 0)
 	{
 		sum = carry;
 		if (i >= 0)
-			sum += n1[i--] - 48;
+		       sum += n1[i--] - 48;
 		if (j >= 0)
 			sum += n2[j--] - 48;
 		carry = sum / 10;
-		r[max_size--] = (sum % 10) + 48;
+		r[k--] = (sum % 10) + 48;
 
-		if (max_size < 0 && (i >= 0 || j >= 0 || carry > 0))
+		if (k < 0 && (i >= 0 || j >= 0 || carry > 0))
 			return (0);
 	}
 
-	while (max_size >= 0)
-	{
-		for (i = 0; r[max_size + 1 - i]; i++)
-			r[i] = r[max_size + 1 - i];
-		r[i] = '\0';
-	}
-
-	return (r);
+	return (r + k + 1);
 }
