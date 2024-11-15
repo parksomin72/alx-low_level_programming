@@ -76,7 +76,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	i = len(n1) - 1;
 	j = len(n2) - 1;
 	carry = 0;
-	r[max_size + 1] = '\0';
+	r[max_size] = '\0';
 
 	while (i >= 0 || j >= 0 || carry > 0)
 	{
