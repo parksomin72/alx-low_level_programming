@@ -32,6 +32,30 @@ int size(char *n1, char *n2)
 	else
 		return (len_n2);
 }
+
+/**
+ * rev_string - reverse array
+ * @str: integer params
+ * Return: 0
+ */
+char *rev_string(char *str, int size)
+{
+	int i, n;
+	char temp;
+
+	if (size % 2)
+		n = size + 1;
+	else
+		n = size;
+
+	for (i = 0; i < n / 2; i++)
+	{
+		temp = str[i];
+		str[i] = str[size - 1 - i];
+		str[size - 1 - i] = temp;
+	}
+	return str;
+}
 /**
  * infinite_add - add 2 numbers together
  * @n1: text representation of 1st number to add
@@ -68,12 +92,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			return (0);
 	}
 
-	if (max_size >= 0)
-	{
-		for (i = 0; r[max_size + 1 - i]; i++)
-			r[i] = r[max_size + 1 - i];
-		r[i] = '\0';
-	}
+	r = rev_string(r, max_size + 1);
 
 	return (r);
 }
