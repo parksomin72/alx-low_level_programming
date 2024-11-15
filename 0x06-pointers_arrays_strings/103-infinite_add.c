@@ -92,26 +92,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			return (0);
 	}
 
-	if (max_size >= 0)
+	while (max_size >= 0)
 	{
-    		int start, end;
-		char temp;
-
-		start = 0;
-		end = max_size;
-
-
-		while (start < end)
-		{
-			temp = r[start];
-			r[start] = r[end];
-			r[end] = temp;
-
-			start++;
-			end--;
-		}
+		for (i = 0; r[max_size + 1 - i]; i++)
+			r[i] = r[max_size + 1 - i];
+		r[i] = '\0';
 	}
-	r[max_size + 1] = '\0';
 
 	return (r);
 }
