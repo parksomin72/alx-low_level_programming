@@ -1,13 +1,26 @@
 #include "main.h"
+/**
+ * len - Computes the length of a string.
+ * @str: The string whose length is to be computed.
+ *
+ * Return: The length of the string `str`.
+ */
 int len(char *str)
 {
-        int len, i;
+	int len, i;
 
-        for (i = 0, len = 0; str[i]; i++)
-                len++;
-        return (len);
+	for (i = 0, len = 0; str[i]; i++)
+		len++;
+	return (len);
 }
 
+/**
+ * size - Determines the maximum length of two strings.
+ * @n1: The first string.
+ * @n2: The second string.
+ *
+ * Return: The length of the longer string between `n1` and `n2`.
+ */
 int size(char *n1, char *n2)
 {
 	int len_n1, len_n2;
@@ -63,5 +76,4 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 
 	return (r);
-	
 }
