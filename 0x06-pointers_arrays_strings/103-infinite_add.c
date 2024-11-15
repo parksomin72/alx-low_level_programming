@@ -76,7 +76,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	i = len(n1) - 1;
 	j = len(n2) - 1;
 	carry = 0;
-	r[max_size] = '\0';
+	r[max_size + 1] = '\0';
 
 	while (i >= 0 || j >= 0 || carry > 0)
 	{
@@ -93,23 +93,24 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 
 	if (max_size >= 0)
-{
-    int start = 0, end = max_size;
-    char temp;
+	{
+    		int start, end;
+		char temp;
 
-    // Reverse the string stored in r
-    while (start < end)
-    {
-        // Swap the characters at start and end
-        temp = r[start];
-        r[start] = r[end];
-        r[end] = temp;
+		start = 0;
+		end = max_size;
 
-        start++;
-        end--;
-    }
-}
 
+		while (start < end)
+		{
+			temp = r[start];
+			r[start] = r[end];
+			r[end] = temp;
+
+			start++;
+			end--;
+		}
+	}
 	r[max_size + 1] = '\0';
 
 	return (r);
