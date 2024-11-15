@@ -92,7 +92,25 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			return (0);
 	}
 
-	r = rev_string(r, max_size + 1);
+	if (max_size >= 0)
+{
+    int start = 0, end = max_size;
+    char temp;
+
+    // Reverse the string stored in r
+    while (start < end)
+    {
+        // Swap the characters at start and end
+        temp = r[start];
+        r[start] = r[end];
+        r[end] = temp;
+
+        start++;
+        end--;
+    }
+}
+
+	r[max_size + 1] = '\0';
 
 	return (r);
 }
