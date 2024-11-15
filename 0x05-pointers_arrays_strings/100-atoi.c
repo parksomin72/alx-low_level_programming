@@ -8,7 +8,7 @@
  */
 int _atoi(char *s)
 {
-	int sign, result, is_digit;
+	int sign, result, is_digit, digit;
 
 	sign = 1;
 	result = 0;
@@ -32,11 +32,16 @@ int _atoi(char *s)
 
 	if (is_digit)
 	{
+
 		while (*s >= '0' && *s <= '9')
 		{
-			result = result * 10 + (*s - 48);
+			digit = *s - 48;
+			if (result > (2147483648 - digit ) / 10 && sign == '-')
+				return (-2147483648);
+			result = result * 10 + digit;
 			s++;
 		}
+
 	}
 
 	return (sign * result);
