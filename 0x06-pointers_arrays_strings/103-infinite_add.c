@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * len - Computes the length of a string.
  * @str: The string whose length is to be computed.
