@@ -36,6 +36,7 @@ void print_buffer(char *b, int size)
 		if (i + j < size)
 		{
 			char c = b[i + j];
+
 			printf("%c", (c >= 32 && c <= 126) ? c : '.');
 		}
 	}
