@@ -10,27 +10,27 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-    char *start_h, *start_n;
+	char *start_h, *start_n;
 
-    if (*needle == '\0')
-        return (haystack);
+	if (*needle == '\0')
+		return (haystack);
 
-    while (*haystack)
-    {
-        start_h = haystack;
-        start_n = needle;
+	while (*haystack)
+	{
+		start_h = haystack;
+		start_n = needle;
 
-        while (*start_n && *start_h == *start_n)
-        {
-            start_h++;
-            start_n++;
-        }
+		while (*start_n && *start_h == *start_n)
+		{
+			start_h++;
+			start_n++;
+		}
 
-        if (*start_n == '\0')
-            return (haystack);
+		if (*start_n == '\0')
+			return (haystack);
 
-        haystack++;
-    }
+		haystack++;
+	}
 
-    return (NULL);
+	return (NULL);
 }
