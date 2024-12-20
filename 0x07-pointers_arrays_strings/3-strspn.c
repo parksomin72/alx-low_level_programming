@@ -1,20 +1,30 @@
 #include "main.h"
-
+/**
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
+ */
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i = 0;
+	char *temp;
 
 	if (!s || !accept)
-		return (NULL);
+		return (0);
 
 	while (*s)
 	{
-		while (*accept)
+		temp = accept;
+		while (*temp)
 		{
-			if (*s == *accept)
-				i++;
-			accept++;
+			if (*s == *temp)
+			{
+				break;
+			}
+			temp++;
 		}
+		i++;
 		s++;
 	}
 	return (i);
