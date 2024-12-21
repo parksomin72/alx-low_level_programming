@@ -11,7 +11,7 @@ char *_strcat(char *dest, char *src)
 	char *start = dest;
 
 	if (!dest || !src)
-		return (NULL);
+		return (0);
 
 	while (*dest)
 		dest++;

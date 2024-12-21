@@ -14,7 +14,7 @@ char *_strncat(char *dest, char *src, int n)
 	int i = 0;
 
 	if (!dest || !src)
-		return (NULL);
+		return (0);
 
 	while (*dest)
 		dest++;
