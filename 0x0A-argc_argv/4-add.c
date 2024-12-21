@@ -62,7 +62,6 @@ int main(int argc, char **argv)
 			{
 				if (*arg >= '0' && *arg <= '9')
 					result = result * 10 + (*arg - '0');
-	
 				arg++;
 			}
 			sum = sum + (result * sign);
