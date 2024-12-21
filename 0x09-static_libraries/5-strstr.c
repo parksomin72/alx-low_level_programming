@@ -11,7 +11,7 @@ char *_strstr(char *haystack, char *needle)
 
 	if (!needle)
 		return (haystack);
-	for (haystack; *haystack; haystack++)
+	for (; *haystack; haystack++)
 	{
 		temp_h = haystack;
 		temp_n = needle;
