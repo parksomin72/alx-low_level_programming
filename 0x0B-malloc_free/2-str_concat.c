@@ -9,7 +9,7 @@ int _strlen(char *s)
 {
 	int i = 0;
 
-	if (!s || !*s)
+	if (!s)
 		return (0);
 	while (s[i])
 		i++;
@@ -36,12 +36,14 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
+
 	s = new_string;
 
-	while (*s1)
+	while (*s1 && s1)
 		*new_string++ = *s1++;
-	while (*s2)
+	while (*s2 && s2)
 		*new_string++ = *s2++;
 
+	*new_string = '\0';
 	return (s);
 }
