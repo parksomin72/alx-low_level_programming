@@ -31,10 +31,7 @@ char *str_concat(char *s1, char *s2)
 	new_string = (char *)malloc(total_len * sizeof(char));
 
 	if (!new_string)
-	{
-		printf("failed to allocate memory\n");
 		return (NULL);
-	}
 
 
 	s = new_string;
