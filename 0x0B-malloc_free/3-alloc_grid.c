@@ -9,8 +9,11 @@
 int **alloc_grid(int width, int height)
 {
 	int i, y;
-	int **new_array = (void *)malloc(width * sizeof(int *));
+	int **new_array;
 
+	if (width <= 0 || height <= 0)
+		return (0);
+	new_array = (void *)malloc(width * sizeof(int *));
 	if (new_array == NULL)
 		return (0);
 	for (i = 0; i < width; i++)
