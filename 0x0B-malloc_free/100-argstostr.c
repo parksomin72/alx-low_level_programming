@@ -2,6 +2,21 @@
 #include <stdlib.h>
 #include <string.h>
 /**
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	if (!s)
+		return (0);
+	for (; *s; s++)
+		len++;
+	return (len);
+}
+/**
  * argstostr - main entry
  * @ac: int input
  * @av: double pointer array
@@ -18,7 +33,7 @@ char *argstostr(int ac, char **av)
 	Total_len = 0;
 	for (i = 0; i < ac; i++)
 	{
-		Total_len += strlen(av[i]);
+		Total_len += _strlen(av[i]);
 	}
 	new_string = (void *)malloc((Total_len + 1) * sizeof(char *));
 	if (new_string == NULL)
