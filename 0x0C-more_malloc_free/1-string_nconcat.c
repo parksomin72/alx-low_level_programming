@@ -1,48 +1,57 @@
-#include "main.h"
-int _strlen(char *s)
+#include <stdlib.h>
+
+/**
+ * _strlen - Returns the length of a string
+ * @s: Input string
+ *
+ * Return: Length of the string, or 0 if s is NULL
+ */
+unsigned int _strlen(char *s)
 {
-	int i = 0;
+	unsigned int len = 0;
+
 	if (!s)
 		return (0);
-	while (s[i])
-		i++;
-	return (i);
+	while (*s++)
+		len++;
+	return (len);
 }
 
 /**
- * *string_nconcat - concatenates n bytes of a string to another string
- * @s1: string to append to
- * @s2: string to concatenate from
- * @n: number of bytes from s2 to concatenate to s1
+ * string_nconcat - Concatenates two strings
+ * @s1: First string
+ * @s2: Second string
+ * @n: Number of bytes from s2 to concatenate
  *
- * Return: pointer to the resulting string
+ * Return: Pointer to the newly allocated string, or NULL if it fails
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, Total_len;
-	unsigned int i;
-	char *new_string;
+	unsigned int len1, len2, i, j;
+	char *result;
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-	if (n < len2)
-		Total_len = len1 + n + 1;
-	else
-		Total_len = len1 + len2 + 1;
 
-	new_string = (char *)malloc(Total_len * sizeof(char));
+	if (n >= len2)
+		n = len2;
 
-	if (new_string == NULL)
+
+	result = malloc((len1 + n + 1) * sizeof(char));
+	if (result == NULL)
 		return (NULL);
 
 
-	for (i = 0; *s1; i++)
-		new_string[i] = *s1++;
-	while (n < len2 && i < (len1 + n))
-		new_string[i++] = *s2++;
-	while (n >= len2 && i < (len1 + len2))
-		new_string[i++] = *s2++;
-	new_string[i] = '\0';
+	for (i = 0; i < len1; i++)
+		result[i] = s1[i];
 
-	return (new_string);
+
+	for (j = 0; j < n; j++)
+		result[i + j] = s2[j];
+
+
+	result[i + j] = '\0';
+
+	return (result);
 }
+
