@@ -19,13 +19,16 @@ int _strlen(char *s)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len1, len2, Total_len;
+	unsigned int len1, len2, Total_len;
 	unsigned int i, y;
 	char *new_string;
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
-	Total_len = len1 + len2 + 1;
+	if (n < len2)
+		Total_len = len1 + n + 1;
+	else
+		Total_len = len1 + len2 + 1;
 
 	new_string = (char *)malloc(Total_len * sizeof(char));
 
