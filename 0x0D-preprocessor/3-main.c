@@ -13,7 +13,7 @@ int main(void)
     int j;
 
     i = ABS(-98);
-    j = ABS(98);
+    j = ABS(98) * 10;
     printf("%d, %d\n", i * 10, j);
     return (0);
 }
